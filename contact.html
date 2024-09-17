@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echelon Web Design</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Your Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+    <style>
+        /* Inline CSS here (unchanged) */
+    </style>
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgb(255, 255, 255);
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            padding-left: 75px;
+        }
+        .main-content {
+            position: relative;
+            color: white;
+            text-align: center;
+            padding: 100px 15px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Prevents any overflow from the background image */
+        }
+        .main-content::before {
+            content: "";
+            position: absolute;
+            top: calc(50% - 400px); /* Move the image up by 400px */
+            left: 50%;
+            width: 75%; /* Adjust the width of the image */
+            height: 65%; /* Adjust the height of the image */
+            background: url('assets/bar.png') no-repeat center center;
+            background-size: contain; /* Ensures the image scales proportionally */
+            background-position: center;
+            z-index: -1;
+            transform: translate(-50%, 0); /* Adjust translate to center horizontally */
+            opacity: 0.5; /* Optional: adjust opacity for better text readability */
+        }
+        .main-content h1 {
+            font-size: 2rem; /* Adjust font size for smaller screens */
+            margin: 0;
+            line-height: 1.2;
+            position: relative;
+            z-index: 1; /* Ensure text is above the background image */
+            color: black; /* Set the text color to black */
+        }
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 1.25rem;
+            }
+            .main-content h1 {
+                font-size: 1.5rem;
+            }
+        }
+        @media (max-width: 576px) {
+            .navbar-brand {
+                font-size: 1rem;
+            }
+            .main-content h1 {
+                font-size: 1.25rem;
+            }
+        }
+        .info-section {
+            padding: 30px 15px; /* Reduce the padding to move the section up */
+            margin-top: -60px; /* Adjust the margin to move the section up */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff; /* Light background color */
+        }
+        .info-text {
+            flex: 1;
+            padding: 20px;
+            max-width: 600px; /* Adjust max-width as needed */
+        }
+        .info-text h2 {
+            font-size: 2rem; /* Larger font size for the header */
+            margin-bottom: 20px;
+            color: #343a40; /* Darker text color */
+        }
+        .info-text p {
+            font-size: 1.125rem; /* Slightly larger font size for readability */
+            color: #6c757d; /* Subtle text color */
+        }
+        .info-image {
+            flex: 1;
+            max-width: 500px; /* Adjust max-width as needed */
+            margin-left: 20px;
+        }
+        .info-image img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px; /* Optional: rounded corners */
+        }
+        .separation-section {
+            position: relative;
+            padding: 60px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff; /* Slightly darker background */
+            overflow: hidden;
+        }
+        .separation-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('assets/art2.png') no-repeat center center;
+            background-size: cover; /* Cover the entire section */
+            z-index: -1;
+            opacity: 0.5; /* Optional: adjust opacity for better text readability */
+        }
+        .separation-text {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 20px;
+        }
+        .separation-text h2 {
+            font-size: 2rem; /* Adjust as needed */
+            margin-bottom: 20px;
+            color: #343a40; /* Darker text color */
+        }
+        .separation-text p {
+            font-size: 1.125rem; /* Adjust as needed */
+            color: #ffffff; /* Subtle text color */
+            max-width: 800px; /* Limit text width for readability */
+            margin: 0 auto;
+        }
+    </style>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light ">
+    <a class="navbar-brand" href="#" style="padding-left: 85px;">
+        <img src="assets/Website Launch (12).png" alt="Echelon Logo" class="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#meet-the-team">Our Team</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Ourwork.html">Our Work</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav social-icons ml-auto">
+         
+    
+        </ul>
+    </div>
+</nav>
+
+    <script type="text/javascript" src="https://form.jotform.com/jsform/242205628166051"></script>
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <!-- Contact Info -->
+        <div class="footer-section contact-info">
+            <h3>Contact Us</h3>
+            <p><strong>Email:</strong> el_word9@yahoo.com</p>
+            <p><strong>Phone:</strong> 682-215-3934</p>
+         
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section social-media">
+            <h3>Follow Us</h3>
+            <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fa fa-linkedin"></i></a>
+            <a href="#" class="social-icon"><i class="fa fa-instagram"></i></a>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="footer-section newsletter">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form action="#" method="post">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 Echelon Website Development Firm All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
